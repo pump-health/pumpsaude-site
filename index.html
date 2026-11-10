@@ -278,6 +278,7 @@
       </div>
       <form action='/obrigado' class='form' method='POST' name='proposta' data-netlify='true' netlify-honeypot='bot-field'>
         <input type="hidden" name="form-name" value="proposta">
+        <input type="hidden" name="subject" value="[Site Pump Saúde] Novo contato" data-remove-prefix>
         <p class="hidden"><label>Não preencha: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <h3>Receba uma proposta</h3>
         <div class="form__row">
@@ -348,6 +349,14 @@
       if (d.length > 2) out = '(' + d.slice(0, 2) + ') ' + d.slice(2);
       if (d.length > 6) out = '(' + d.slice(0, 2) + ') ' + d.slice(2, d.length === 11 ? 7 : 6) + '-' + d.slice(d.length === 11 ? 7 : 6);
       input.value = out;
+    });
+  })();
+  (function () {
+    var form = document.querySelector('form[name="proposta"]');
+    if (!form) return;
+    form.addEventListener('submit', function () {
+      var nome = form.elements.nome.value.trim();
+      if (nome) form.elements.subject.value = '[Site Pump Saúde] Novo contato: ' + nome;
     });
   })();
 </script>
