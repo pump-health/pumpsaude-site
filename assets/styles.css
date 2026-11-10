@@ -204,7 +204,7 @@ section[id] { scroll-margin-top: 16px; }
 .trust p { margin-top: 4px; font-size: 15px; line-height: 22px; letter-spacing: -0.45px; color: var(--n700); }
 
 /* Plans */
-.planos { padding-top: 24px; padding-bottom: 24px; display: flex; flex-direction: column; gap: 32px; }
+.valores { padding-top: 24px; padding-bottom: 24px; display: flex; flex-direction: column; gap: 32px; }
 .price-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; margin: -8px 0; table-layout: fixed; }
 .price-table th { padding: 6px 0; text-align: left; font-size: 13px; font-weight: 600; line-height: 16px; letter-spacing: -0.11px; color: var(--n500); }
 .price-table td { background: var(--white); padding: 22px 0; font-size: 17px; font-weight: 600; line-height: 22px; }
