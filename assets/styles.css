@@ -203,23 +203,23 @@ section[id] { scroll-margin-top: 16px; }
 .trust h4 { font-size: 17px; font-weight: 600; line-height: 22px; }
 .trust p { margin-top: 4px; font-size: 15px; line-height: 22px; letter-spacing: -0.45px; color: var(--n700); }
 
-/* Plans */
-.planos { padding-top: 24px; padding-bottom: 24px; display: flex; flex-direction: column; gap: 32px; }
-.price-table { width: 100%; border-collapse: separate; border-spacing: 0 8px; margin: -8px 0; table-layout: fixed; }
-.price-table th { padding: 6px 0; text-align: left; font-size: 13px; font-weight: 600; line-height: 16px; letter-spacing: -0.11px; color: var(--n500); }
-.price-table td { background: var(--white); padding: 22px 0; font-size: 17px; font-weight: 600; line-height: 22px; }
-.price-table th:first-child, .price-table td:first-child { padding-left: 32px; }
-.price-table td:first-child { border-radius: var(--r-lg) 0 0 var(--r-lg); }
-.price-table td:last-child { border-radius: 0 var(--r-lg) var(--r-lg) 0; }
-.price-table .disc { color: var(--orange); }
-.price-table .disc--none { color: var(--n500); }
-.price-table .price { font-size: 24px; font-weight: 700; line-height: 22px; letter-spacing: -0.48px; }
-.price-table .lbl { display: none; }
+/* Prices */
+.valores { padding-top: 24px; padding-bottom: 24px; display: flex; flex-direction: column; gap: 32px; }
+.price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: -16px; }
+.price-card { background: var(--white); border-radius: var(--r-xl); padding: 40px; display: flex; flex-direction: column; gap: 24px; }
+.price-card__head { display: flex; align-items: center; gap: 12px; }
+.price-card__icon { background: var(--orange-100); border-radius: 1000px; padding: 12px; }
+.price-card--teal .price-card__icon { background: var(--teal-100); }
+.price-card__icon img { width: 24px; height: 24px; }
+.price-card h3 { font-size: 22px; font-weight: 700; line-height: 28px; letter-spacing: -0.8px; }
+.price-card__value { display: flex; align-items: baseline; gap: 8px; }
+.price-card__value strong { font-size: 52px; font-weight: 800; line-height: 58px; letter-spacing: -1.56px; }
+.price-card__value span { font-size: 17px; font-weight: 500; line-height: 30px; letter-spacing: -0.5px; color: var(--n500); }
 .plans-more { background: var(--black); color: var(--white); border-radius: var(--r-lg); padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .plans-more__txt { display: flex; align-items: center; gap: 24px; font-size: 17px; }
 .plans-more__txt strong { font-weight: 600; line-height: 22px; }
+.plans-more__txt em { font-style: normal; color: var(--orange-600); }
 .plans-more__txt span { color: var(--n300); line-height: 30px; letter-spacing: -0.5px; }
-.plans-table-wrap { display: flex; flex-direction: column; gap: 8px; }
 
 /* FAQ */
 .duvidas { padding-top: 110px; padding-bottom: 110px; display: flex; flex-direction: column; gap: 40px; }
@@ -293,13 +293,8 @@ section[id] { scroll-margin-top: 16px; }
   .cards2, .faq { grid-template-columns: 1fr; }
   .cards3.trust-grid { grid-template-columns: 1fr; }
   .big-card { padding: 32px; }
-  .price-table, .price-table tbody, .price-table tr, .price-table td { display: block; }
-  .price-table { margin: 0; }
-  .price-table thead { display: none; }
-  .price-table tr { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; background: var(--white); border-radius: var(--r-lg); padding: 20px 24px; margin-bottom: 8px; }
-  .price-table td, .price-table td:first-child { padding: 0; border-radius: 0; background: none; }
-  .price-table td:nth-child(2) { text-align: right; }
-  .price-table .lbl { display: block; font-size: 13px; font-weight: 600; line-height: 16px; letter-spacing: -0.11px; color: var(--n500); margin-bottom: 4px; }
+  .price-cards { grid-template-columns: 1fr; }
+  .price-card { padding: 32px; }
   .plans-more { flex-direction: column; align-items: flex-start; padding: 20px 24px; }
   .plans-more__txt { flex-direction: column; align-items: flex-start; gap: 4px; }
   .cta-box { padding: 32px 24px; gap: 32px; }
@@ -324,6 +319,8 @@ section[id] { scroll-margin-top: 16px; }
   .step { flex: 0 0 80%; scroll-snap-align: center; }
   .big-card { padding: 24px; }
   .big-card h3 { font-size: 28px; }
+  .price-card { padding: 24px; gap: 20px; }
+  .price-card__value strong { font-size: 40px; line-height: 44px; letter-spacing: -1.1px; }
   .example { flex-direction: column; align-items: flex-start; }
   .example__right { text-align: left; }
   .stats { gap: 8px; }
